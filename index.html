@@ -65,6 +65,31 @@
             letter-spacing: 2px;
             color: #FFD700;
             margin-bottom: 10px;
+            position: relative;
+            padding: 20px 0;
+        }
+        .titre-principal::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 60px;
+            background: radial-gradient(circle at center, rgba(255,215,0,0.25), rgba(255,215,0,0));
+            filter: blur(20px);
+            z-index: -1;
+        }
+        .titre-principal::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #ffffff, #FFD700);
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -126,10 +151,6 @@
 
     <footer>
         <p>&copy; 2025 Thomas BAPTISTE. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
-
     </footer>
 </body>
 </html>
