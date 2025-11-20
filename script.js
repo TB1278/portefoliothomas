@@ -1,65 +1,56 @@
-// Animation d'apparition des sections au scroll
-const sections = document.querySelectorAll('section');
-const revealOnScroll = () => {
-    const trigger = window.innerHeight * 0.85;
-    sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < trigger) sec.classList.add('visible');
-    });
-};
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-
-// Effet balle de padel rebondissante
-const ball = document.createElement('div');
-ball.style.width = '25px';
-ball.style.height = '25px';
-ball.style.background = '#FFD700';
-ball.style.borderRadius = '50%';
-ball.style.position = 'fixed';
-ball.style.left = '20px';
-ball.style.top = '20px';
-ball.style.zIndex = '9999';
-ball.style.boxShadow = '0 0 10px rgba(255,215,0,0.7)';
-document.body.appendChild(ball);
-
-let x = 20, y = 20, dx = 3, dy = 3;
-const animateBall = () => {
-    const w = window.innerWidth - 30;
-    const h = window.innerHeight - 30;
-    x += dx; y += dy;
-
-    if (x <= 0 || x >= w) dx *= -1;
-    if (y <= 0 || y >= h) dy *= -1;
-
-    ball.style.left = x + 'px';
-    ball.style.top = y + 'px';
-    requestAnimationFrame(animateBall);
-};
-animateBall();
-
-// Messages inspirés de ta personnalité
-const messages = [
-    "Toujours adaptable 🚀",
-    "Loyauté et ambition 💪",
-    "Polyvalence sportive et pro ⚡",
-    "Padel : passion, précision, performance 🎾",
-    "Rester calme même dans la tempête 🌊",
-    "Objectif : progresser encore et toujours 🔥"
-];
-
-const randomMessage = document.createElement('div');
-randomMessage.style.position = 'fixed';
-randomMessage.style.right = '20px';
-randomMessage.style.bottom = '20px';
-randomMessage.style.padding = '12px 20px';
-randomMessage.style.background = 'rgba(0,0,0,0.4)';
-randomMessage.style.borderRadius = '12px';
-randomMessage.style.color = '#FFD700';
-randomMessage.style.fontWeight = '600';
-randomMessage.style.fontSize = '1rem';
-randomMessage.style.backdropFilter = 'blur(6px)';
-randomMessage.style.boxShadow = '0 0 12px rgba(0,0,0,0.4)';
-randomMessage.textContent = messages[Math.floor(Math.random() * messages.length)];
-document.body.appendChild(randomMessage);
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mon Profil - Thomas BAPTISTE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: top 0.3s ease;
+            z-index: 999;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        section {
+            background: rgba(255,255,255,0.1);
+            margin: 100px auto 40px auto;
+            padding: 30px;
+            width: 80%;
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .visible { opacity: 1; transform: translateY(0); transition: all 0.7s ease; }
+        .titre-principal { text-align: center; font-size: 3rem; font-weight: 700; letter-spacing: 2px; color: #FFD700; margin-bottom: 10px; position: relative; padding: 20px 0; }
+        .titre-principal::before { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 80%; height: 60px; background: radial-gradient(circle at center, rgba(255,215,0,0.25), rgba(255,215,0,0)); filter: blur(20px); z-index: -1; }
+        .titre-principal::after { content: ""; position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 120px; height: 4px; background: linear-gradient(90deg, #FFD700, #ffffff, #FFD700); border-radius: 10px; }
+        footer { text-align: center; padding: 20px 0; background: rgba(0, 0, 0, 0.4); margin-top: 40px;
