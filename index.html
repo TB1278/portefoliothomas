@@ -1,62 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Mon Profil - Thomas BAPTISTE</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mon Profil - Thomas BAPTISTE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(8px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        section {
+            background: rgba(255,255,255,0.1);
+            margin: 40px auto;
+            padding: 30px;
+            width: 80%;
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        h1, h2 {
+            color: #FFD700;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.4);
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-<header>
-<nav>
-<ul>
-<li><a href="#qui-suis-je">Qui suis-je</a></li>
-<li><a href="#parcours">Parcours</a></li>
-<li><a href="#competences">Compétences</a></li>
-<li><a href="#passion-padel">Ma passion : le Padel</a></li>
-</ul>
-</nav>
-</header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#qui-suis-je">Qui suis-je</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#passion-padel">Ma passion : le Padel</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="qui-suis-je">
+        <h1>Qui suis-je ?</h1>
+        <p><strong>Nom :</strong> Thomas BAPTISTE</p>
+        <p><strong>Âge :</strong> 20 ans</p>
+        <p><strong>Passions :</strong> J'adore la vie, m'amuser et je suis assez sportif. Actuellement, je pratique le Padel au niveau régional, après avoir fait du basket et du rugby.</p>
+        <p><strong>Trois mots pour ma personnalité :</strong> Adaptabilité, Loyale, Polyvalent</p>
+        <p><strong>Mes valeurs principales :</strong> Esprit d’équipe et curiosité.</p>
+        <h2>Anecdote personnelle :</h2>
+        <p>Avec des amis, nous sommes partis à 5 en Espagne. En visitant une ville voisine, nous nous sommes fait voler nos 5 téléphones, ainsi que la clé de voiture, la clé d’appartement et mes lunettes de soleil. Malgré cette mésaventure, nous avons fini par rentrer chez nous après de longues heures d’attentes et de galères. Cette expérience m'a appris à garder mon calme et à trouver des solutions même dans des situations stressantes.</p>
+    </section>
 
-<section id="qui-suis-je">
-<h1>Qui suis-je ?</h1>
-<p><strong>Nom :</strong> Thomas BAPTISTE</p>
-<p><strong>Âge :</strong> 20 ans</p>
-<p><strong>Passions :</strong> J'adore la vie, m'amuser et je suis assez sportif. Actuellement, je pratique le Padel au niveau régional, après avoir fait du basket et du rugby.</p>
-<p><strong>Trois mots pour ma personnalité :</strong> Adaptabilité, Loyale, Polyvalent</p>
-<p><strong>Mes valeurs principales :</strong> Esprit d’équipe et curiosité.</p>
-<h2>Anecdote personnelle :</h2>
-<p>Avec des amis, nous sommes partis à 5 en Espagne. En visitant une ville voisine, nous nous sommes fait voler nos 5 téléphones, ainsi que la clé de voiture, la clé d’appartement et mes lunettes de soleil. Malgré cette mésaventure, nous avons fini par rentrer chez nous après de longues heures d’attentes et de galères. Cette expérience m'a appris à garder mon calme et à trouver des solutions même dans des situations stressantes.</p>
-</section>
+    <section id="parcours">
+        <h1>Mon Parcours</h1>
+        <p><strong>Formation :</strong> Actuellement en 3ème année de Licence en commercialisation des produits et services sportifs à l’Ileps.</p>
+        <p><strong>Matière marquante :</strong> Excel et comptabilité, car ce sont des outils que j’utilise directement dans mon travail actuel.</p>
+        <h2>Expériences professionnelles et associatives :</h2>
+        <p>Je travaille actuellement en alternance dans l’association sportive de Stellantis. Cela m'a permis d'acquérir de l'expérience professionnelle tout en développant des compétences personnelles et professionnelles.</p>
+        <p>Mon parcours m’a également permis de faire des rencontres enrichissantes, de grandir et d'évoluer dans un environnement dynamique.</p>
+    </section>
 
+    <section id="competences">
+        <h1>Mes Compétences</h1>
+        <h2>Compétences pratiques :</h2>
+        <p>Dans le cadre de mes études, j'ai principalement développé des compétences en commerce, notamment la prospection, la communication, la négociation et la gestion de projet.</p>
+        <h2>Compétences personnelles (soft skills) :</h2>
+        <p>Je pense que mes principaux points forts sont l'organisation, l'écoute, l'esprit d'équipe et la persévérance. Ces qualités me permettent de travailler efficacement en équipe tout en restant centré sur l'atteinte des objectifs.</p>
+    </section>
 
-<section id="parcours">
-<h1>Mon Parcours</h1>
-<p><strong>Formation :</strong> Actuellement en 3ème année de Licence en commercialisation des produits et services sportifs à l’Ileps.</p>
-<p><strong>Matière marquante :</strong> Excel et comptabilité, car ce sont des outils que j’utilise directement dans mon travail actuel.</p>
-<h2>Expériences professionnelles et associatives :</h2>
-<p>Je travaille actuellement en alternance dans l’association sportive de Stellantis. Cela m'a permis d'acquérir de l'expérience professionnelle tout en développant des compétences personnelles et professionnelles.</p>
-<p>Mon parcours m’a également permis de faire des rencontres enrichissantes, de grandir et d'évoluer dans un environnement dynamique.</p>
-</section>
+    <section id="passion-padel">
+        <h1>Ma Passion : le Padel</h1>
+        <p>Le padel occupe aujourd’hui une place essentielle dans ma vie. Ce sport, qui mélange stratégie, agilité et précision, me permet non seulement de m’épanouir physiquement, mais aussi mentalement.</p>
+        <p>Je joue actuellement au niveau régional, ce qui m'amène à participer à des tournois, à m’entraîner régulièrement et à repousser mes limites. Ce sport m’a appris la rigueur, la gestion du stress, mais aussi l’importance de la communication avec son partenaire.</p>
+        <p>Ce que j’aime particulièrement dans le padel, c’est son côté ludique et intense : chaque point est un mélange de réflexion, d’anticipation et de créativité. C’est un sport qui rassemble et qui crée de véritables moments de partage.</p>
+        <h2>Ce que le padel m’apporte :</h2>
+        <ul>
+            <li>Une excellente condition physique</li>
+            <li>Une amélioration de ma coordination et de mes réflexes</li>
+            <li>Une meilleure gestion des émotions en compétition</li>
+            <li>Un esprit d’équipe renforcé</li>
+            <li>Une motivation quotidienne pour progresser</li>
+        </ul>
+    </section>
 
-
-<section id="competences">
-<h1>Mes Compétences</h1>
-<h2>Compétences pratiques :</h2>
-<p>Dans le cadre de mes études, j'ai principalement développé des compétences en commerce, notamment la prospection, la communication, la négociation et la gestion de projet.</p>
-<h2>Compétences personnelles (soft skills) :</h2>
-<p>Je pense que mes principaux points forts sont l'organisation, l'écoute, l'esprit d'équipe et la persévérance. Ces qualités me permettent de travailler efficacement en équipe tout en restant centré sur l'atteinte des objectifs.</p>
-</section>
-
-
-<section id="passion-padel">
-<h1>Ma Passion : le Padel</h1>
-<p>Le padel occupe aujourd’hui une place essentielle dans ma vie. Ce sport, qui mélange stratégie, agilité et précision, me permet non seulement de m’épanouir physiquement, mais aussi mentalement.</p>
-<p>Je joue actuellement au niveau régional, ce qui m'amène à participer à des tournois, à m’entraîner régulièrement et à repousser mes limites. Ce sport m’a appris la rigueur, la gestion du stress, mais aussi l’importance de la communication avec son partenaire.</p>
-<p>Ce que j’aime particulièrement dans le padel, c’est son côté ludique et intense : chaque point est un mélange de réflexion, d’anticipation et de créativité. C’est un sport qui rassemble et qui crée de véritables moments de partage.</p>
-<h2>Ce que le padel m’apporte :</h2>
-<ul>
-<li>Une excellente condition physique</li>
+    <footer>
+        <p>&copy; 2025 Thomas BAPTISTE. Tous droits réservés.</p>
+    </footer>
+</body>
 </html>
